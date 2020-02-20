@@ -1,0 +1,26 @@
+﻿@model List<Passionproject2.Models.Order>
+@{
+    ViewBag.Title = "List";
+}
+
+
+
+<h2>List of Orders</h2>
+<div class="navbar">
+    <a class="navlink" href="/Order/New">Add New</a>
+</div>
+<div class="tilecontainer">
+    @foreach (var order in @Model)
+    {
+        //convert to currency (string format)
+      
+        string Cost = String.Format("{0:C2}", ((decimal)order.OrderCost/ 100));
+    <div class="listitem">
+        <div>OrderItem:<a href="/Order/Show/@order.OrderID">@order.OrderItem</a></div>
+        <div>Date: @order.OrderDate</div>
+        <div>Quantity of Item: @order.OrderItemQty</div>
+        <div>Order Cost: @order.OrderCost</div>
+  
+    </div>
+    }
+</div>

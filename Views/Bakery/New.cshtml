@@ -1,0 +1,21 @@
+﻿@model List<Passionproject2.Models.Bakery>
+@{
+    ViewBag.Title = "New";
+}
+
+<h2>Add a new Bakery</h2>
+
+<div class="navbar">
+    <a class="navlink" href="/Bakery/List">Back to List</a>
+</div>
+<form method="POST" action="/Bakery/Add">
+
+    <div class="inpfield"><span>Name:</span><input id="BakeryName" type="text" name="BakeryName" /></div>
+    <div class="inpfield"><span>Address:</span><input id="BakeryAddress" type="text" name="BakeryAddress" /></div>
+
+
+    <div class="inpfield">
+        <input type="submit" value="Add Bakery">
+    </div>
+</form>
+

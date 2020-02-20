@@ -1,0 +1,38 @@
+﻿@model Passionproject2.Models.ViewModel.ShowOrder
+
+@{
+    ViewBag.Title = "Show";
+
+}
+
+
+<h2>Show Order</h2>
+
+<div class="navbar">
+    <a class="navlink" href="/Order/List">Back to List</a>
+    <a class="navlink" href="/Order/Update/@Model.Order.OrderID">Update</a>
+    <a class="navlink" href="/order/DeleteConfirm/@Model.Order.OrderID">Delete</a>
+</div>
+
+<div class="col2">
+    <div>Order Item : @</div>
+    <div>Order Date : @Model.Order.OrderDate</div>
+    <div>Ordered Item Quantity : @Model.Order.OrderItemQty</div>
+    <div>Order Cost : @Model.Order.OrderCost</div>
+</div>
+<div class="col2last">
+    <div class="sectionheader">Customers:</div>
+    @{
+
+        foreach (var customer in @Model.Customers)
+        {
+            <div class="lineitem">
+                <a href="/Customer/Show/@customer.CustomerID">@customer.CustomerName</a>
+            </div>
+        }
+
+
+    }
+    <div class="sectionheader">Info About Customer Here</div>
+</div>
+<div style="clear:both;"></div>

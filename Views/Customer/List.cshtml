@@ -1,0 +1,34 @@
+﻿@model List<Passionproject2.Models.Customer>
+@{
+    ViewBag.Title = "List";
+
+}
+
+<h2>List of Customers</h2>
+
+<div class="navbar">
+    <a class="navlink" href="/Customer/New">Add New</a>
+</div>
+
+
+<div class="tilecontainer">
+    @{
+        foreach (var Customer in Model)
+        {
+            <div class="listitem">
+                <div class="itemdetails">
+                    <div class="listcat"><a href="/Customer/Show/@Customer.CustomerID">@Customer.CustomerName</a></div>
+
+                    <div class="listcat">Emailid <span>@Customer.Emailid</span></div>
+                    <div class="listcat">Phone <span>@Customer.Phone</span></div>
+                    <div class="listcat">Customer address <span>@Customer.CustomerAddress</span></div>
+                    <!--<span class="cta"><a href="/Bakery/Update/@Customer.CustomerID">Update</a></span>-->
+                </div>
+                <div style="clear:both;"></div>
+            </div>
+        }
+    }
+    <div style="clear:both;"></div>
+</div>
+
+

@@ -1,0 +1,20 @@
+﻿@model Passionproject2.Models.Customer
+@{
+    ViewBag.Title = "Update";
+
+}
+
+<h2>Update Customer Details</h2>
+<div class="navbar">
+    <a href="/Customer/List">Back to List</a>
+</div>
+<form action="/Customer/Update/@Model.CustomerID" method="POST">
+
+    <div class="inpfield"><span>CustomerName: </span><input type="text" value="@Model.CustomerName" id="CustomerName" name="CustomerName" /> </div>
+    <div class="inpfield"><span>Emailid: </span><input type="text" value="@Model.Emailid" id="Emailid" name="Emailid" /> </div>
+    <div class="inpfield"><span>Phone: </span><input type="text" value="@Model.Phone" id="Phone" name="Phone" /> </div>
+    <div class="inpfield"><span>CustomerAddress: </span><input type="text" value="@Model.CustomerAddress" id="CustomerAddress" name="CustomerAddress" /> </div>
+    <div class="inpfield"><input type="submit" value="update customer" /></div>
+
+</form>
+

@@ -1,0 +1,11 @@
+﻿@model Passionproject2.Models.Bakery
+@{
+    ViewBag.Title = "Show";
+}
+
+<h2>Show Bakery</h2>
+
+<div>Name : @Model.BakeryName</div>
+<div>Address : @Model.BakeryAddress</div>
+<a href="/Bakery/Update/@Model.BakeryID">Update</a>
+<a href="/Bakery/DeleteConfirm/@Model.BakeryID">Delete</a>

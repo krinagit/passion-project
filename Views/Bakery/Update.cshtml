@@ -1,0 +1,20 @@
+﻿@model Passionproject2.Models.Bakery
+
+
+@{
+    ViewBag.Title = "Update";
+}
+
+
+<h2>Update Bakery Details</h2>
+<div class="navbar">
+    <a href="/Bakery/List">Back to List</a>
+</div>
+<form action="/Bakery/Update/@Model.BakeryID" method="POST">
+
+    <div class="inpfield"><span>Bakery Name: </span><input type="text" value="@Model.BakeryName" id="BakeryName" name="BakeryName" /> </div>
+    <div class="inpfield"><span>Bakery Address: </span><input type="text" value="@Model.BakeryAddress" id="BakeryAddress" name="BakeryAddress" /> </div>
+    <div class="inpfield"><input type="submit" value="update bakery" /></div>
+
+</form>
+

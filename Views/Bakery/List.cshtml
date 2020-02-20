@@ -1,0 +1,30 @@
+﻿@model List<Passionproject2.Models.Bakery>
+@{
+    ViewBag.Title = "List";
+}
+
+<h2>List of Bakeries</h2>
+<div class="navbar">
+    <a class="navlink" href="/Bakery/New">Add New</a>
+</div>
+
+
+<div class="tilecontainer">
+    @{
+
+        foreach (var Bakery in Model)
+        {
+            <div class="listitem">
+                <div class="itemdetails">
+                    <div class="listcat"><a href="/Bakery/Show/@Bakery.BakeryID">@Bakery.BakeryName</a></div>
+                    <div class="listcat">Address <span>@Bakery.BakeryAddress</span></div>
+                    <!--<span class="cta"><a href="/Bakery/Update/@Bakery.BakeryID">Update</a></span>-->
+                </div>
+                <div style="clear:both;"></div>
+            </div>
+        }
+    }
+    <div style="clear:both;"></div>
+</div>
+
+

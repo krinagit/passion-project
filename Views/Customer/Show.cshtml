@@ -1,0 +1,17 @@
+﻿@model Passionproject2.Models.Customer
+
+@{
+    ViewBag.Title = "Show";
+
+}
+
+
+<h2>Show Customer</h2>
+
+<div>Name : @Model.CustomerName</div>
+<div>Emailid : @Model.Emailid</div>
+<div>Phone : @Model.Phone</div>
+<div>Address : @Model.CustomerAddress</div>
+<a href="/Customer/Update/@Model.CustomerID">Update</a>
+<a href="/Customer/DeleteConfirm/@Model.CustomerID">Delete</a>
+

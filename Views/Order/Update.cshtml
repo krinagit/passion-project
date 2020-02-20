@@ -1,0 +1,19 @@
+﻿@model Passionproject2.Models.Order
+@{
+    ViewBag.Title = "Update";
+
+}
+
+<h2>Update order Details</h2>
+<div class="navbar">
+    <a href="/Order/List">Back to List</a>
+</div>
+<form action="/Order/Update/@Model.OrderID" method="POST">
+
+    <div class="inpfield"><span>Order Item: </span><input type="text" value="@Model.OrderItem" id="OrderItem" name="OrderItem" /> </div>
+    <div class="inpfield"><span>Order Date: </span><input type="text" value="@Model.OrderDate" id="OrderDate" name="OrderDate" /> </div>
+    <div class="inpfield"><span>Order ItemQty: </span><input type="text" value="@Model.OrderItemQty" id="OrderItemQty" name="OrderItemQty" /> </div>
+    <div class="inpfield"><span>Order Cost: </span><input type="text" value="@Model.OrderCost" id="OrderCost" name="OrderCost" /> </div>
+    <div class="inpfield"><input type="submit" value="update customer" /></div>
+
+</form>

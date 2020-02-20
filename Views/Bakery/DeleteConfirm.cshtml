@@ -1,0 +1,12 @@
+﻿@model Passionproject2.Models.Bakery
+@{
+    ViewBag.Title = "DeleteConfirm";
+}
+
+<h2>Are you sure you want to delete @Model.BakeryName?</h2>
+<div class="navbar">
+    <a href="/Bakery/Show/@Model.BakeryID">Cancel</a>
+</div>
+<form method="POST" action="/Bakery/Delete/@Model.BakeryID">
+    <div class="inpfield"><input type="submit" value="Confirm" /></div>
+</form>
